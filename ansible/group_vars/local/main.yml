@@ -1,0 +1,33 @@
+---
+# Packages from APT manager
+apt_packages:
+  - build-essential
+  - curl
+  - wget
+  - ruby2.5-dev
+  - libpq-dev
+
+# Ruby version with Brightbox`s path
+ruby_version: 2.5
+ruby_brightbox_bundler_version: 2.0.1
+
+# PostgreSQL
+postgresql_version: 10
+postgresql_encoding: 'UTF-8'
+postgresql_databases:
+  - name: test_database
+    owner: test_user
+
+postgresql_users:
+  - name: test_user
+    encrypted: yes
+    pass: 123456
+
+postgresql_user_privileges:
+  - name: test_user
+    db: test_database
+    priv: "ALL"
+    role_attr_flags: "SUPERUSER"
+
+postgresql_listen_addresses:
+  - '*'

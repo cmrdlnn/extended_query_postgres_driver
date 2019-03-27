@@ -1,0 +1,13 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+*.log
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Provisioning for development
+.vagrant/
+/ansible/roles/
