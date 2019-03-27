@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
 require 'singleton'
-require 'struct'
 
 module ExtendedQueryPostgresDriver
-  module Configuration
+  class Configuration
     include Singleton
 
     def self.configure

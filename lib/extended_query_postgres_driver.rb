@@ -3,4 +3,5 @@
 module ExtendedQueryPostgresDriver
 end
 
-require 'extended_query_postgres_driver/configuration'
+require_relative 'extended_query_postgres_driver/configuration.rb'
+require_relative 'extended_query_postgres_driver/connection.rb'

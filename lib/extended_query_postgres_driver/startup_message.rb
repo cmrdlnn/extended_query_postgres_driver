@@ -31,10 +31,8 @@ module ExtendedQueryPostgresDriver
     def call
       PARAMETERS.each do |parameter|
         next unless @parameters.key?(parameter)
-
-        [parameter.to_s, @parameters[parameter]].each do |value|
-          write(value, value.size, PARAMETER_PAIRS_TEMPLATE)
-        end
+        write(parameter.to_s, parameter.to_s.size, PARAMETER_PAIRS_TEMPLATE)
+        write(@parameters[parameter], @parameters[parameter].size, PARAMETER_PAIRS_TEMPLATE)
       end
 
       write(0, 0, NULL_BYTE_TEMPLATE)
