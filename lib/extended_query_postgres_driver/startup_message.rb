@@ -7,7 +7,7 @@ module ExtendedQueryPostgresDriver
 
     # Шаблон метода Array#pack для кодирования первых двух частей стартового
     # сообщения - длинны сообщения в байтах и версии протокола
-    LENGTH_AND_VERSION_TEMPLATE = 'L>L>'
+    LENGTH_AND_VERSION_TEMPLATE = 'NN'
 
     PARAMETER_PAIRS_TEMPLATE = 'Z*'
 
@@ -31,11 +31,12 @@ module ExtendedQueryPostgresDriver
     def call
       PARAMETERS.each do |parameter|
         next unless @parameters.key?(parameter)
-        write(parameter.to_s, parameter.to_s.size, PARAMETER_PAIRS_TEMPLATE)
+        write(parameter.to_s, parameter.size, PARAMETER_PAIRS_TEMPLATE)
         write(@parameters[parameter], @parameters[parameter].size, PARAMETER_PAIRS_TEMPLATE)
       end
 
       write(0, 0, NULL_BYTE_TEMPLATE)
+      p @message
       @message.pack(@pack_string)
     end
 

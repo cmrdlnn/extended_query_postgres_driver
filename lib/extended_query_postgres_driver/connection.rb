@@ -3,13 +3,31 @@
 require 'digest'
 require 'socket'
 
-require_relative 'startup_message.rb'
+require_relative 'messages/frontend/startup'
+require_relative 'messages/frontend/parse'
+require_relative 'messages/frontend/bind'
+require_relative 'messages/frontend/execute'
+require_relative 'messages/frontend/sync'
+require_relative 'messages/backend/parse_complete'
+require_relative 'messages/backend/bind_complete'
+require_relative 'messages/backend/data_row'
 
 module ExtendedQueryPostgresDriver
   class Status
+    ERROR_RESPONSE = 'E'
+
+    AUTHENTICATION_REQUEST = 'R'
+
+    READY_FOR_QUERY = 'Z'
+
+    PARSE = 'P'
+
     def initialize(host, port, user, password, database)
       @socket = TCPSocket.new(host, port)
-      @startup_message = StartupMessage.call(user: user, database: database)
+      @startup_message = Messages::Frontend::Startup.new(
+        user: user,
+        database: database
+      ).pack
       @password = password
       @user = user
     end
@@ -25,13 +43,16 @@ module ExtendedQueryPostgresDriver
         data = socket.read(4)
         length = data.unpack('L>').first - 4
         payload = socket.read(length)
+
         case char_tag
-        when 'E'
+        when ERROR_RESPONSE
           break
-        when 'R'
+        when AUTHENTICATION_REQUEST
           decoded(payload)
-        when 'Z'
-          return true
+        when READY_FOR_QUERY
+          p 'ready'
+          parse
+          break
         end
       end
       false
@@ -57,6 +78,35 @@ module ExtendedQueryPostgresDriver
       end
     end
 
+    def parse
+      parse = Messages::Frontend::Parse.new(query: 'select * from pg_type;').pack
+      bind = Messages::Frontend::Bind.new.pack
+      execute = Messages::Frontend::Execute.new.pack
+      sync = Messages::Frontend::Sync.new.pack
+
+      socket.write(parse)
+      socket.write(bind)
+      socket.write(execute)
+      socket.write(sync)
+
+      p Messages::Backend::ParseComplete.new(socket)
+      p Messages::Backend::BindComplete.new(socket)
+      p Messages::Backend::DataRow.new(socket)
+      p Messages::Backend::DataRow.new(socket)
+      p Messages::Backend::DataRow.new(socket)
+      p Messages::Backend::DataRow.new(socket)
+      p Messages::Backend::DataRow.new(socket)
+      p Messages::Backend::DataRow.new(socket)
+      p Messages::Backend::DataRow.new(socket)
+    end
+
     attr_reader :socket, :startup_message, :password, :user
   end
 end
+p ExtendedQueryPostgresDriver::Status.ready?(
+  database: 'test_database',
+  host: 'localhost',
+  port: '5432',
+  user: 'test_user',
+  password: '123456'
+)
