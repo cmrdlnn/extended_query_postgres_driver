@@ -11,3 +11,6 @@
 # Provisioning for development
 .vagrant/
 /ansible/roles/
+
+# History of Interactive Ruby Shell
+.irb_history
