@@ -3,12 +3,12 @@
 module ExtendedQueryPostgresDriver
   module Messages
     module Frontend
-      class Describe < FrontendMessage
+      class Describe < Base::Message
         TYPE = 'D'
 
         def initialize(statement_or_portal: 'S', statement_or_portal_name: '')
           super()
-          write_string(statement_or_portal)
+          write_byte(statement_or_portal.ord)
           write_string(statement_or_portal_name)
         end
       end

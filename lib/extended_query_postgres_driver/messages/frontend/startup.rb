@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-require_relative '../../base/frontend_message'
-
 module ExtendedQueryPostgresDriver
   module Messages
     module Frontend
-      class Startup < FrontendMessage
+      class Startup < Base::Message
         PROTOCOL_VERSION = 196_608
 
         ARGUMENTS = %i[

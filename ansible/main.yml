@@ -3,22 +3,20 @@
   become: yes
 
   pre_tasks:
-    - name: Set env variables
-      lineinfile:
-        dest: "/home/vagrant/.bashrc"
-        regexp: "^export {{ item.var }}="
-        line: "export {{ item.var }}={{ item.value }}"
-      with_items:
-        - { var: "RAILS_ENV", value: "development" }
-
     - name: Autofollow to project on logon
       lineinfile:
         dest: "/home/vagrant/.bashrc"
         regexp: "^cd /vagrant"
         line: "cd /vagrant"
 
+    - name: Install a list of APT packages
+      apt:
+        name: "{{ packages }}"
+      vars:
+        packages:
+          - libpq-dev
+
   roles:
-    - role: apt
-    - role: ruby-brightbox
+    - role: rbenv
     - role: ntp
     - role: postgresql

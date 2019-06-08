@@ -3,8 +3,12 @@
 module ExtendedQueryPostgresDriver
   module Messages
     module Frontend
-      class Sync < FrontendMessage
+      class Sync < Base::Message
         TYPE = 'S'
+
+        def initialize(_)
+          super()
+        end
       end
     end
   end

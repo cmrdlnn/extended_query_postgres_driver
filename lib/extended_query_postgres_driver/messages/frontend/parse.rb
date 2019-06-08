@@ -3,7 +3,7 @@
 module ExtendedQueryPostgresDriver
   module Messages
     module Frontend
-      class Parse < FrontendMessage
+      class Parse < Base::Message
         TYPE = 'P'
 
         def initialize(query:, statement_name: '', parameter_type_oids: [])

@@ -3,7 +3,7 @@
 module ExtendedQueryPostgresDriver
   module Messages
     module Frontend
-      class Bind < FrontendMessage
+      class Bind < Base::Message
         TYPE = 'B'
 
         def initialize(

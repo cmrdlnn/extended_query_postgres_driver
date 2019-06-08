@@ -3,7 +3,7 @@
 module ExtendedQueryPostgresDriver
   module Messages
     module Frontend
-      class Execute < FrontendMessage
+      class Execute < Base::Message
         TYPE = 'E'
 
         def initialize(portal_name: '', rows_number: 0)

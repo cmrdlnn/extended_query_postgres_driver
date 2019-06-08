@@ -1,10 +1,6 @@
-# APT
-- src: https://github.com/vterdunov/ansible-apt
-  name: apt
-
-# Ruby Brightbox
-- src: https://github.com/vterdunov/ansible-ruby-brightbox
-  name: ruby-brightbox
+# Ruby
+- src: https://github.com/zzet/ansible-rbenv-role
+  name: rbenv
 
 # NTP
 - src: https://github.com/geerlingguy/ansible-role-ntp

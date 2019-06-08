@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Скрипт, запускающий IRB
+
+require_relative '../lib/extended_query_postgres_driver'
+
+require 'irb'
+require 'irb/completion'
+
+IRB.start

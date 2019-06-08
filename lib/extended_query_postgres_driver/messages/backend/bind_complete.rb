@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-require_relative '../../base/backend_message'
-
 module ExtendedQueryPostgresDriver
   module Messages
     module Backend
-      class BindComplete < BackendMessage
+      class BindComplete < Base::Message
         TYPE = '2'
       end
     end

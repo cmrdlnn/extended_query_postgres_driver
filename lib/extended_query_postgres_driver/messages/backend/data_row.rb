@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require_relative '../../base/backend_message'
-
 module ExtendedQueryPostgresDriver
   module Messages
     module Backend
-      class DataRow < BackendMessage
+      class DataRow < Base::Message
         TYPE = 'D'
+
+        attr_reader :columns
 
         def initialize(socket)
           super

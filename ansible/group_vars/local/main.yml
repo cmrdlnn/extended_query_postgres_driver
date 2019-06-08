@@ -1,18 +1,17 @@
 ---
-# Packages from APT manager
-apt_packages:
-  - build-essential
-  - curl
-  - wget
-  - ruby2.5-dev
-  - libpq-dev
+# Ruby version manager
+rbenv:
+  env: user
+  version: v1.1.2
+  default_ruby: 2.6.3
+  rubies:
+    - version: 2.6.3
 
-# Ruby version with Brightbox`s path
-ruby_version: 2.5
-ruby_brightbox_bundler_version: 2.0.1
+rbenv_users: [vagrant]
+rbenv_owner: 'vagrant'
 
 # PostgreSQL
-postgresql_version: 10
+postgresql_version: 11
 postgresql_encoding: 'UTF-8'
 postgresql_databases:
   - name: test_database
