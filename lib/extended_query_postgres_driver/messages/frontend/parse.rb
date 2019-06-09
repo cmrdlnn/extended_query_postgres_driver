@@ -10,7 +10,7 @@ module ExtendedQueryPostgresDriver
           super()
           write_strings(statement_name, query)
           write_int16(parameter_type_oids.size)
-          parameter_type_oids.each(&method(:write_int16))
+          parameter_type_oids.each(&method(:write_int32))
         end
       end
     end

@@ -21,6 +21,10 @@ module ExtendedQueryPostgresDriver
             write(value, 1, 'C')
           end
 
+          def write_bytes(bytes)
+            bytes.each(&method(:write_byte))
+          end
+
           def write_int32(value)
             write(value, 4, 'N')
           end

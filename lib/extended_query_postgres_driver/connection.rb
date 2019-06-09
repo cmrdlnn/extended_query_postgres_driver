@@ -32,8 +32,8 @@ module ExtendedQueryPostgresDriver
     end
 
     def test_query
-      Messages.write(@socket, 'P', query: 'select * from pg_type limit 1;')
-      Messages.write(@socket, 'B')
+      Messages.write(@socket, 'P', query: 'select oid, typname from pg_type where typname ilike $1;')
+      Messages.write(@socket, 'B', parameter_values: ['int%'])
       Messages.write(@socket, 'D')
       Messages.write(@socket, 'E')
       Messages.write(@socket, 'S')

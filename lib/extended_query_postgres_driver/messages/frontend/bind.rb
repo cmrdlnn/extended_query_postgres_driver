@@ -31,7 +31,7 @@ module ExtendedQueryPostgresDriver
           write_int16(parameter_values.size)
           parameter_values.each do |parameter_value|
             write_int32(parameter_value.size)
-            write_string(parameter_value)
+            write_bytes(parameter_value.bytes)
           end
         end
       end
