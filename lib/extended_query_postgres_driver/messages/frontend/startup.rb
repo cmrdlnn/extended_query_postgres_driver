@@ -13,7 +13,7 @@ module ExtendedQueryPostgresDriver
         ].freeze
 
         def initialize(args)
-          super([8, PROTOCOL_VERSION])
+          @content      = [8, PROTOCOL_VERSION]
           @length_index = 0
           @template     = 'NN'
 

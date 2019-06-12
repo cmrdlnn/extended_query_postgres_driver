@@ -15,7 +15,6 @@ module ExtendedQueryPostgresDriver
 
       def self.read(socket)
         type = socket.read(1).unpack('Z').first
-        p type
         MESSAGES[type].new(socket)
       end
     end

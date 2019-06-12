@@ -11,9 +11,7 @@ module ExtendedQueryPostgresDriver
             @cursor  = 0
           end
 
-          def unpack(template = nil)
-            @content.unpack(template)
-          end
+          private
 
           def read_byte
             read('C', 1)
@@ -49,8 +47,6 @@ module ExtendedQueryPostgresDriver
           def rewind
             @cursor = 0
           end
-
-          private
 
           def unpack_byteslice(template, bytes_count)
             @content.byteslice(@cursor, bytes_count).unpack(template).first

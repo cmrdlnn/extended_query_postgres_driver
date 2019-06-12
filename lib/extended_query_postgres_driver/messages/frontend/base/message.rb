@@ -4,18 +4,18 @@ module ExtendedQueryPostgresDriver
   module Messages
     module Frontend
       module Base
-        class Message < Array
-          def initialize(initial_items = [4])
-            super
-            return unless self.class.const_defined?(:TYPE)
-            unshift(self.class::TYPE)
+        class Message
+          def initialize
+            @content      = [self.class::TYPE, 4]
             @length_index = 1
             @template     = 'ZN'
           end
 
-          def pack
-            super(@template)
+          def send_message(socket)
+            socket.write(pack)
           end
+
+          private
 
           def write_byte(value)
             write(value, 1, 'C')
@@ -41,16 +41,18 @@ module ExtendedQueryPostgresDriver
             strings.each(&method(:write_string))
           end
 
-          private
+          def pack
+            @content.pack(@template)
+          end
 
           def write(value, length, template)
             increase_length(length)
-            push(value)
+            @content.push(value)
             @template += template
           end
 
           def increase_length(increment)
-            self.[]=(@length_index, self.[](@length_index) + increment)
+            @content[@length_index] += increment
           end
         end
       end

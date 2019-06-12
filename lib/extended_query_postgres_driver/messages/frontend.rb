@@ -15,7 +15,8 @@ module ExtendedQueryPostgresDriver
       end.freeze
 
       def self.write(socket, type, args)
-        socket.write(MESSAGES[type].new(args).pack)
+        message = MESSAGES[type].new(args)
+        message.send_message(socket)
       end
     end
   end
