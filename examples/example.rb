@@ -4,39 +4,30 @@ require_relative '../lib/extended_query_postgres_driver'
 
 ExtendedQueryPostgresDriver.configure do |config|
   config.database = 'test_database'
-  config.user = 'test_user'
+  config.user     = 'test_user'
   config.password = '123456'
 end
 
 connection = ExtendedQueryPostgresDriver::Connection.new
-p connection
-socket = connection.socket
-messages = ExtendedQueryPostgresDriver::Messages
 
-messages.write(socket, 'P', query: 'select oid, typname from pg_type where typname ilike $1 OR typname ilike $2;')
-messages.write(socket, 'B', parameter_values: [StringIO.new('int%'), 't%'])
-messages.write(socket, 'D')
-messages.write(socket, 'E')
-messages.write(socket, 'S')
+connection.parse(query: 'DROP TABLE IF EXISTS files;')
+connection.bind
+connection.execute
 
-fields = []
-result = []
+connection.parse(query: 'CREATE TABLE files (content text);')
+connection.bind
+connection.execute
 
-loop do
-  response = messages.read(socket)
-  p response, response.class::TYPE
-  case response
-  when messages::Backend::RowDescription
-    fields = response.fields.map { |field| field[:name].to_sym }
-  when messages::Backend::DataRow
-    row = fields.each_with_object({}).with_index do |(field, memo), i|
-      memo[field] = response.columns[i]
-    end
-    result.push(row)
-  when messages::Backend::ReadyForQuery
-    @transaction_status = response.transaction_status
-    break
-  end
-end
+file = File.open(File.join(__dir__, 'iso_8859-1.txt'))
+connection.parse(query: 'INSERT INTO files VALUES ($1);')
+connection.bind(format_codes: [1], parameter_values: [file])
+connection.execute
 
-p result
+connection.parse(query: 'SELECT * FROM files;')
+connection.bind
+connection.describe
+connection.execute
+
+connection.sync
+
+p connection.result
