@@ -14,3 +14,6 @@
 
 # History of Interactive Ruby Shell
 .irb_history
+
+# Yard Ruby code documentation template files
+.yardoc

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: ExtendedQueryPostgresDriver::Messages::Backend::DataRow
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "ExtendedQueryPostgresDriver::Messages::Backend::DataRow";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../ExtendedQueryPostgresDriver.html" title="ExtendedQueryPostgresDriver (module)">ExtendedQueryPostgresDriver</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Messages.html" title="ExtendedQueryPostgresDriver::Messages (module)">Messages</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Backend.html" title="ExtendedQueryPostgresDriver::Messages::Backend (module)">Backend</a></span></span>
+     &raquo; 
+    <span class="title">DataRow</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: ExtendedQueryPostgresDriver::Messages::Backend::DataRow
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Base/Message.html" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message (class)">Base::Message</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Base/Message.html" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message (class)">Base::Message</a></span></li>
+          
+            <li class="next">ExtendedQueryPostgresDriver::Messages::Backend::DataRow</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/extended_query_postgres_driver/messages/backend/data_row.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Class for reading and parsing the content of `DataRow` message which return the row of result of some SQL query</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="TYPE-constant" class="">TYPE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Identifier of `DataRow` message</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#columns-instance_method" title="#columns (instance method)">#<strong>columns</strong>  &#x21d2; Array&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Columns of returned row.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Base/Message.html" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message (class)">Base::Message</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Base/Message.html#content-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#content (method)">#content</a></span>, <span class='object_link'><a href="Base/Message.html#cursor-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#cursor (method)">#cursor</a></span>, <span class='object_link'><a href="Base/Message.html#length-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#length (method)">#length</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(socket)  &#x21d2; DataRow </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates class instance for reading and parsing the content of `DataRow` message message which return the row of result of some SQL query.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Base/Message.html" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message (class)">Base::Message</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Base/Message.html#read-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#read (method)">#read</a></span>, <span class='object_link'><a href="Base/Message.html#read_byte-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#read_byte (method)">#read_byte</a></span>, <span class='object_link'><a href="Base/Message.html#read_bytes-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#read_bytes (method)">#read_bytes</a></span>, <span class='object_link'><a href="Base/Message.html#read_int16-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#read_int16 (method)">#read_int16</a></span>, <span class='object_link'><a href="Base/Message.html#read_int32-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#read_int32 (method)">#read_int32</a></span>, <span class='object_link'><a href="Base/Message.html#read_string-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#read_string (method)">#read_string</a></span>, <span class='object_link'><a href="Base/Message.html#rewind-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#rewind (method)">#rewind</a></span>, <span class='object_link'><a href="Base/Message.html#unpack_byteslice-instance_method" title="ExtendedQueryPostgresDriver::Messages::Backend::Base::Message#unpack_byteslice (method)">#unpack_byteslice</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(socket)  &#x21d2; <tt><span class='object_link'><a href="" title="ExtendedQueryPostgresDriver::Messages::Backend::DataRow (class)">DataRow</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates class instance for reading and parsing the content of `DataRow` message message which return the row of result of some SQL query</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>socket</span>
+      
+      
+        <span class='type'>(<tt>TCPSocket</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The TCPSocket instance for interaction with PostgreSQL server</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/extended_query_postgres_driver/messages/backend/data_row.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='kw'>super</span>
+  <span class='id identifier rubyid_columns_count'>columns_count</span> <span class='op'>=</span> <span class='id identifier rubyid_read_int16'>read_int16</span>
+  <span class='ivar'>@columns</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_columns_count'>columns_count</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_length'>length</span> <span class='op'>=</span> <span class='id identifier rubyid_read_int32'>read_int32</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>4_294_967_295</span>
+    <span class='id identifier rubyid_read_bytes'>read_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="columns-instance_method">
+  
+    #<strong>columns</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Columns of returned row</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the current value of columns</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/extended_query_postgres_driver/messages/backend/data_row.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_columns'>columns</span>
+  <span class='ivar'>@columns</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Jun 19 05:18:10 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
+</html>
