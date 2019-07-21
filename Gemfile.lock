@@ -3,9 +3,9 @@ GEM
   specs:
     benchmark-memory (0.1.2)
       memory_profiler (~> 0.9)
-    memory_profiler (0.9.13)
+    memory_profiler (0.9.14)
     pg (1.1.4)
-    yard (0.9.19)
+    yard (0.9.20)
 
 PLATFORMS
   ruby

@@ -9,7 +9,7 @@
 !/tmp/.keep
 
 # Provisioning for development
-.vagrant/
+/.vagrant/
 /ansible/roles/
 
 # History of Interactive Ruby Shell
@@ -17,3 +17,11 @@
 
 # Yard Ruby code documentation template files
 .yardoc
+
+# Documentation
+/doc/*
+
+# Examples of library usage and benchmarks
+/examples/*
+!/examples/benchmarks.rb
+!/examples/example.rb

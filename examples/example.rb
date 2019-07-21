@@ -20,7 +20,7 @@ connection.execute
 
 file = File.open(File.join(__dir__, 'iso_8859-1.txt'))
 connection.parse(query: 'INSERT INTO files VALUES ($1);')
-connection.bind(format_codes: [1], parameter_values: [file])
+connection.bind(format_codes: [1], parameters: [file])
 connection.execute
 
 connection.parse(query: 'SELECT * FROM files;')
