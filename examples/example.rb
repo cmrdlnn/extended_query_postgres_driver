@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'pp'
 require_relative '../lib/extended_query_postgres_driver'
 
 ExtendedQueryPostgresDriver.configure do |config|
@@ -30,4 +31,4 @@ connection.execute
 
 connection.sync
 
-p connection.result
+pp connection.result

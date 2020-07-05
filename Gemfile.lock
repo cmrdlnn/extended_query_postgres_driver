@@ -4,8 +4,8 @@ GEM
     benchmark-memory (0.1.2)
       memory_profiler (~> 0.9)
     memory_profiler (0.9.14)
-    pg (1.1.4)
-    yard (0.9.20)
+    pg (1.2.3)
+    yard (0.9.25)
 
 PLATFORMS
   ruby
@@ -16,4 +16,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   2.0.1
+   2.1.4

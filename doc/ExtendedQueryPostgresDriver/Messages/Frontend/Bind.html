@@ -6,15 +6,15 @@
 <title>
   Class: ExtendedQueryPostgresDriver::Messages::Frontend::Bind
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.25
   
 </title>
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "ExtendedQueryPostgresDriver::Messages::Frontend::Bind";
   relpath = '../../../';
 </script>
@@ -241,102 +241,6 @@
 </li>
 
       
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#send_part-instance_method" title="#send_part (instance method)">#<strong>send_part</strong>(socket, start, ending, tmp_start, tmp_ending)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Packs part of message into byte sequence and then sends this part to the socket.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#write_format_codes-instance_method" title="#write_format_codes (instance method)">#<strong>write_format_codes</strong>(format_codes)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Adds the format codes of parameters or results to content of message.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#write_parameter_value-instance_method" title="#write_parameter_value (instance method)">#<strong>write_parameter_value</strong>(parameter)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Adds the parameter value to content of message, or add it to streams attribute if parameter is respond to `read` method.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#write_parameters-instance_method" title="#write_parameters (instance method)">#<strong>write_parameters</strong>(parameters)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Adds the parameter values to content of message.</p>
-</div></span>
-  
-</li>
-
-      
     </ul>
   
 
@@ -346,12 +250,7 @@
   
   
   
-  
-  
-  
-  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Base/Message.html" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message (class)">ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Base/Message.html#increase_length-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#increase_length (method)">#increase_length</a></span>, <span class='object_link'><a href="Base/Message.html#pack-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#pack (method)">#pack</a></span>, <span class='object_link'><a href="Base/Message.html#write-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write (method)">#write</a></span>, <span class='object_link'><a href="Base/Message.html#write_byte-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_byte (method)">#write_byte</a></span>, <span class='object_link'><a href="Base/Message.html#write_bytes-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_bytes (method)">#write_bytes</a></span>, <span class='object_link'><a href="Base/Message.html#write_int16-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_int16 (method)">#write_int16</a></span>, <span class='object_link'><a href="Base/Message.html#write_int32-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_int32 (method)">#write_int32</a></span>, <span class='object_link'><a href="Base/Message.html#write_string-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_string (method)">#write_string</a></span>, <span class='object_link'><a href="Base/Message.html#write_strings-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_strings (method)">#write_strings</a></span></p>
-<div id="constructor_details" class="method_details_list">
+  <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
@@ -383,6 +282,8 @@
         <span class='type'>(<tt>String</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -398,6 +299,8 @@
       
         <span class='type'>(<tt>String</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
       
       
         &mdash;
@@ -415,6 +318,8 @@
         <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>[]</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -431,6 +336,8 @@
         <span class='type'>(<tt>Array</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>[]</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -446,6 +353,8 @@
       
         <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>[]</tt>)</em>
       
       
         &mdash;
@@ -651,344 +560,14 @@
 </table>
 </div>
     
-      <div class="method_details ">
-  <h3 class="signature " id="send_part-instance_method">
-  
-    #<strong>send_part</strong>(socket, start, ending, tmp_start, tmp_ending)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Packs part of message into byte sequence and then sends this part to the socket</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>socket</span>
-      
-      
-        <span class='type'>(<tt>TCPSocket</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The TCPSocket instance for interaction with PostgreSQL server</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>start</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Index of start of content array to be sended</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>ending</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Index of end of content array to be sended</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>tmp_start</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Index of the start of the pattern with which the message content will be packed into byte sequence</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>tmp_ending</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Index of the end of the pattern with which the message content will be packed into byte sequence</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-75
-76
-77
-78
-79</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/extended_query_postgres_driver/messages/frontend/bind.rb', line 75</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_send_part'>send_part</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_start'>start</span><span class='comma'>,</span> <span class='id identifier rubyid_ending'>ending</span><span class='comma'>,</span> <span class='id identifier rubyid_tmp_start'>tmp_start</span><span class='comma'>,</span> <span class='id identifier rubyid_tmp_ending'>tmp_ending</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_content_part'>content_part</span>  <span class='op'>=</span> <span class='ivar'>@content</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='id identifier rubyid_start'>start</span><span class='comma'>,</span> <span class='id identifier rubyid_ending'>ending</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_template_part'>template_part</span> <span class='op'>=</span> <span class='ivar'>@template</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='id identifier rubyid_tmp_start'>tmp_start</span><span class='comma'>,</span> <span class='id identifier rubyid_tmp_ending'>tmp_ending</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_content_part'>content_part</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='id identifier rubyid_template_part'>template_part</span><span class='rparen'>)</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="write_format_codes-instance_method">
-  
-    #<strong>write_format_codes</strong>(format_codes)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Adds the format codes of parameters or results to content of message</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>format_codes</span>
-      
-      
-        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The parameter format codes</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-83
-84
-85
-86</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/extended_query_postgres_driver/messages/frontend/bind.rb', line 83</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_write_format_codes'>write_format_codes</span><span class='lparen'>(</span><span class='id identifier rubyid_format_codes'>format_codes</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_write_int16'>write_int16</span><span class='lparen'>(</span><span class='id identifier rubyid_format_codes'>format_codes</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_format_codes'>format_codes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:write_int16</span><span class='rparen'>)</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="write_parameter_value-instance_method">
-  
-    #<strong>write_parameter_value</strong>(parameter)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Adds the parameter value to content of message, or add it to streams attribute if parameter is respond to `read` method</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>parameters</span>
-      
-      
-        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Parameter value</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/extended_query_postgres_driver/messages/frontend/bind.rb', line 98</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_write_parameter_value'>write_parameter_value</span><span class='lparen'>(</span><span class='id identifier rubyid_parameter'>parameter</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_length'>length</span> <span class='op'>=</span> <span class='id identifier rubyid_parameter'>parameter</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
-  <span class='id identifier rubyid_write_int32'>write_int32</span><span class='lparen'>(</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_parameter'>parameter</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:read</span><span class='rparen'>)</span>
-    <span class='ivar'>@streams</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='ivar'>@content</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='comma'>,</span> <span class='ivar'>@template</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='comma'>,</span> <span class='id identifier rubyid_parameter'>parameter</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_increase_length'>increase_length</span><span class='lparen'>(</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
-  <span class='kw'>else</span>
-    <span class='id identifier rubyid_write_bytes'>write_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_parameter'>parameter</span><span class='period'>.</span><span class='id identifier rubyid_bytes'>bytes</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="write_parameters-instance_method">
-  
-    #<strong>write_parameters</strong>(parameters)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Adds the parameter values to content of message</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>parameters</span>
-      
-      
-        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Parameter values</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-90
-91
-92
-93</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/extended_query_postgres_driver/messages/frontend/bind.rb', line 90</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_write_parameters'>write_parameters</span><span class='lparen'>(</span><span class='id identifier rubyid_parameters'>parameters</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_write_int16'>write_int16</span><span class='lparen'>(</span><span class='id identifier rubyid_parameters'>parameters</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_parameters'>parameters</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:write_parameter_value</span><span class='rparen'>)</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Wed Jun 19 05:18:10 2019 by
+  Generated on Sun Jul  5 23:00:54 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.3).
+  0.9.25 (ruby-2.6.3).
 </div>
 
     </div>

@@ -6,15 +6,15 @@
 <title>
   Class: ExtendedQueryPostgresDriver::Messages::Frontend::Startup
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.25
   
 </title>
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "ExtendedQueryPostgresDriver::Messages::Frontend::Startup";
   relpath = '../../../';
 </script>
@@ -205,30 +205,6 @@
 </li>
 
       
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#write_options-instance_method" title="#write_options (instance method)">#<strong>write_options</strong>(options)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Adds options to content of message.</p>
-</div></span>
-  
-</li>
-
-      
     </ul>
   
 
@@ -242,7 +218,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Base/Message.html" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message (class)">Base::Message</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Base/Message.html#increase_length-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#increase_length (method)">#increase_length</a></span>, <span class='object_link'><a href="Base/Message.html#pack-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#pack (method)">#pack</a></span>, <span class='object_link'><a href="Base/Message.html#send_message-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#send_message (method)">#send_message</a></span>, <span class='object_link'><a href="Base/Message.html#write-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write (method)">#write</a></span>, <span class='object_link'><a href="Base/Message.html#write_byte-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_byte (method)">#write_byte</a></span>, <span class='object_link'><a href="Base/Message.html#write_bytes-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_bytes (method)">#write_bytes</a></span>, <span class='object_link'><a href="Base/Message.html#write_int16-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_int16 (method)">#write_int16</a></span>, <span class='object_link'><a href="Base/Message.html#write_int32-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_int32 (method)">#write_int32</a></span>, <span class='object_link'><a href="Base/Message.html#write_string-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_string (method)">#write_string</a></span>, <span class='object_link'><a href="Base/Message.html#write_strings-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#write_strings (method)">#write_strings</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Base/Message.html#send_message-instance_method" title="ExtendedQueryPostgresDriver::Messages::Frontend::Base::Message#send_message (method)">#send_message</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -387,85 +363,12 @@
 </div>
 
 
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="write_options-instance_method">
-  
-    #<strong>write_options</strong>(options)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Adds options to content of message</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Command-line arguments</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-57
-58
-59
-60
-61
-62</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/extended_query_postgres_driver/messages/frontend/startup.rb', line 57</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_write_options'>write_options</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_command_line_arguments'>command_line_arguments</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_option'>option</span><span class='op'>|</span>
-    <span class='id identifier rubyid_option'>option</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[ \\]</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_char'>char</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\\</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_char'>char</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
-  <span class='kw'>end</span>
-  <span class='id identifier rubyid_write_strings'>write_strings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>options</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command_line_arguments'>command_line_arguments</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
 </div>
 
       <div id="footer">
-  Generated on Wed Jun 19 05:18:10 2019 by
+  Generated on Sun Jul  5 23:00:54 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.3).
+  0.9.25 (ruby-2.6.3).
 </div>
 
     </div>
