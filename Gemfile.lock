@@ -5,7 +5,7 @@ GEM
       memory_profiler (~> 0.9)
     memory_profiler (0.9.14)
     pg (1.2.3)
-    yard (0.9.25)
+    yard (0.9.36)
 
 PLATFORMS
   ruby
